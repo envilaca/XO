@@ -1,4 +1,4 @@
-package XO;
+package xo;
 
 class Game {
 
@@ -45,7 +45,7 @@ class Game {
         // I undented them to make things line up
         return index == 4 && hasThreeInADig(0)
             || index == 4 && hasThreeInADig(2)
-            || index % 2 == 0 && hasThreeInADig(index % 3)
+            || index % 2 == 0 && hasThreeInADig(index)
             || hasThreeInACol(index % 3)
             || hasThreeInARow(index / 3);
     }

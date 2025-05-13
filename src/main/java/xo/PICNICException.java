@@ -1,4 +1,4 @@
-package XO;
+package xo;
 
 // Problem in chair, not in computer.
 public class PICNICException extends NumberFormatException {

@@ -1,4 +1,4 @@
-package XO;
+package xo;
 
 import java.util.Scanner;
 
