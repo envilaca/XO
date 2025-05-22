@@ -17,7 +17,7 @@ public class BoardTests {
         game.play("1", true);
 
         // Assert
-        Assertions.assertThrows(PICNICException.class, () -> game.play("1", true));
+        Assertions.assertThrows(BoardSquareException.class, () -> game.play("1", true));
     }
 
     @Test

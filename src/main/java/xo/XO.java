@@ -2,12 +2,10 @@ package xo;
 
 import java.util.Scanner;
 
-// The quality of comments is rapidly declining
-// Well, quality as in potential didacticity
 public class XO {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to XO (pronounced miiighh)!");
+        System.out.println("Welcome to XO!");
         Game xo = new Game();
 
         Scanner scanner = new Scanner(System.in);
@@ -30,15 +28,14 @@ public class XO {
 
             if (turn > 3) {
                 // We only check for a win 5 turns in and we only check the last played square
-                // ~ ADVANCED ~
                 if (!xo.checkWin(index)) continue;
-                System.out.println("You " + (player ? "win." : "loose."));
+                System.out.println("You " + (player ? "win." : "lose."));
                 break;
             }
         }
         scanner.close();
 
-        System.out.println("bai bai baiiiiiii");
+        System.out.println("Goodbye.");
     }
 
 }
