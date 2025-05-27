@@ -1,2 +1,2 @@
 # XO
-Rock paper scissors for the terminal. Computer plays randomly.
+Noughts and Crosses for the terminal. Computer plays randomly.
