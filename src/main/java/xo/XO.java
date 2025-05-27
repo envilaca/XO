@@ -26,9 +26,8 @@ public class XO {
 
             System.out.println(xo.getBoard());
 
-            if (turn > 3) {
-                // We only check for a win 5 turns in and we only check the last played square
-                if (!xo.checkWin(index)) continue;
+            // We only check for a win 5 turns in and we only check the last played square
+            if (turn > 3 && xo.isWon(index)) {
                 System.out.println("You " + (player ? "win." : "lose."));
                 break;
             }

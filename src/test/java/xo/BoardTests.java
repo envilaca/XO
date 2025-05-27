@@ -30,7 +30,7 @@ public class BoardTests {
         game.play("6", true);
 
         // Assert
-        Assertions.assertTrue(game.checkWin(3));
+        Assertions.assertTrue(game.isWon(3));
     }
 
     @Test
@@ -43,7 +43,7 @@ public class BoardTests {
         game.play("8", true);
 
         // Assert
-        Assertions.assertTrue(game.checkWin(7));
+        Assertions.assertTrue(game.isWon(7));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class BoardTests {
         game.play("7", true);
 
         // Assert
-        Assertions.assertTrue(game.checkWin(2));
+        Assertions.assertTrue(game.isWon(2));
     }
 
     @AfterEach

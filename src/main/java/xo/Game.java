@@ -27,10 +27,8 @@ class Game {
         return boardPreview;
     }
 
-    public boolean checkWin(int index) {
-        return index == 4 && hasThreeInADig(0)
-            || index == 4 && hasThreeInADig(2)
-            || index % 2 == 0 && hasThreeInADig(index)
+    public boolean isWon(int index) {
+        return hasThreeInADig(index)
             || hasThreeInACol(index % 3)
             || hasThreeInARow(index / 3);
     }
@@ -43,8 +41,10 @@ class Game {
         return board[col] == board[3 + col] && board[3 + col] == board[6 + col];
     }
 
-    private boolean hasThreeInADig(int dig) {
-        return board[dig] == board[4] && board[4] == board[8 - dig];
+    // The latter equation was revealed to me in a dream
+    private boolean hasThreeInADig(int ind) {
+        return (ind % 4 == 0                 && board[0] == board[4] && board[4] == board[8])
+            || (ind - 2 - (ind / 3) * 2 == 0 && board[2] == board[4] && board[4] == board[6]);
     }
 
     final Computer computer;
